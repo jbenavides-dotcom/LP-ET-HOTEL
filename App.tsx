@@ -78,10 +78,15 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-20">
           <div className="col-span-1 sm:col-span-2">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 lg:mb-10">
-              <Logo variant="pink" className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16" />
-              <div className="flex flex-col">
-                <span className="text-lg sm:text-xl font-serif font-bold text-white">LA PALMA & EL TUCÁN</span>
-                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-pink font-bold">Coffee Experience</span>
+              <Logo variant="pink" showBadge={true} className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20" />
+              <div className="flex flex-col leading-tight">
+                {/* Logo text con colores oficiales de marca */}
+                <span className="text-base sm:text-lg lg:text-xl font-serif font-bold tracking-tight">
+                  <span className="text-brand-gold">LA PALMA</span>
+                  <span className="text-brand-pink mx-0.5">&</span>
+                  <span className="text-brand-gold">EL TUCÁN</span>
+                </span>
+                <span className="text-brand-pink font-serif text-sm sm:text-base lg:text-lg">HOTEL</span>
               </div>
             </div>
             <p className="text-white/50 max-w-sm leading-relaxed mb-6 sm:mb-8 lg:mb-10 text-sm font-light">
