@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BOOKING_URL, ASSETS, COFFEE_TOUR_INFO, CONTACT_INFO } from '../constants';
+import { openConcierge, ASSETS, COFFEE_TOUR_INFO } from '../constants';
 import { MessageCircle, MapPin, Coffee as CoffeeIcon, Star, Clock, Users } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -68,16 +68,14 @@ const Hero: React.FC = () => {
 
           {/* CTA Principal - WhatsApp */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 hover:bg-green-500 text-white px-8 sm:px-10 py-4 sm:py-5 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-2xl active:scale-95 rounded-lg"
-              aria-label="Reservar Coffee Tour por WhatsApp"
+            <button
+              onClick={openConcierge}
+              className="bg-brand-pink hover:bg-brand-pink/90 text-white px-8 sm:px-10 py-4 sm:py-5 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-2xl active:scale-95 rounded-lg"
+              aria-label="Reservar Coffee Tour - Hablar con Concierge"
             >
               <MessageCircle className="w-5 h-5" />
-              Reservar por WhatsApp
-            </a>
+              Reservar Ahora
+            </button>
             <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 text-white/80 px-4 sm:px-6 py-3 sm:py-4 glass-morphism rounded-xl">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink flex-shrink-0" />
               <span className="text-xs uppercase tracking-widest font-medium">90 min desde Bogotá</span>

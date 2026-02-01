@@ -20,6 +20,13 @@ const ConciergeChat: React.FC = () => {
     }
   }, [messages]);
 
+  // Escuchar evento global para abrir el chat desde cualquier botón
+  useEffect(() => {
+    const handleOpenChat = () => setIsOpen(true);
+    window.addEventListener('openConcierge', handleOpenChat);
+    return () => window.removeEventListener('openConcierge', handleOpenChat);
+  }, []);
+
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
-import { NAV_LINKS, BOOKING_URL } from '../constants';
+import { NAV_LINKS, openConcierge } from '../constants';
 import Logo from './Logo';
 
 const Navbar: React.FC = () => {
@@ -47,16 +47,14 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 sm:px-6 py-2.5 sm:py-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg active:scale-95 rounded-lg"
-            aria-label="Reservar Coffee Tour por WhatsApp"
+          <button
+            onClick={openConcierge}
+            className="hidden sm:flex items-center gap-2 bg-brand-pink hover:bg-brand-pink/90 text-white px-4 sm:px-6 py-2.5 sm:py-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg active:scale-95 rounded-lg"
+            aria-label="Reservar Coffee Tour - Hablar con Concierge"
           >
             <MessageCircle className="w-4 h-4" />
             Reservar
-          </a>
+          </button>
 
           <button
             className="lg:hidden text-white p-2 -mr-2"
@@ -84,16 +82,13 @@ const Navbar: React.FC = () => {
               {link.label}
             </a>
           ))}
-          <a
-            href={BOOKING_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-600 text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform rounded-xl flex items-center justify-center gap-2"
-            onClick={() => setIsOpen(false)}
+          <button
+            onClick={() => { openConcierge(); setIsOpen(false); }}
+            className="bg-brand-pink text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform rounded-xl flex items-center justify-center gap-2 w-full"
           >
             <MessageCircle className="w-5 h-5" />
-            Reservar por WhatsApp
-          </a>
+            Reservar Ahora
+          </button>
         </div>
       </div>
     </nav>

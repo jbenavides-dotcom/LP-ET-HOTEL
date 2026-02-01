@@ -29,9 +29,13 @@ export const ASSETS = {
   EVENTOS: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/eventos.png",
 };
 
-// LINKS PRINCIPALES DE RESERVA - WhatsApp directo
+// LINKS PRINCIPALES DE RESERVA
 export const WHATSAPP_BOOKING = "https://wa.me/573209306834?text=Hola%2C%20quiero%20reservar%20el%20Coffee%20Tour%20%F0%9F%8C%BF%E2%98%95";
-export const BOOKING_URL = WHATSAPP_BOOKING;
+
+// Función para abrir el Concierge AI desde cualquier botón
+export const openConcierge = () => {
+  window.dispatchEvent(new CustomEvent('openConcierge'));
+};
 
 // Cloudbeds solo para alojamiento
 export const CLOUDBEDS_URL = "https://hotels.cloudbeds.com/en/reservation/yB0fEt";

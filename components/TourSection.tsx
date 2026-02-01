@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TOUR_STEPS, BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
+import { TOUR_STEPS, openConcierge, ASSETS, COFFEE_TOUR_INFO } from '../constants';
 import { Award, MessageCircle, Clock, Users, Leaf, Check, Coffee } from 'lucide-react';
 
 const TourSection: React.FC = () => {
@@ -123,16 +123,14 @@ const TourSection: React.FC = () => {
                   <p>Mínimo 2 personas</p>
                 </div>
               </div>
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-green-600 hover:bg-green-500 text-white py-4 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all rounded-xl active:scale-95"
-                aria-label="Reservar Coffee Tour por WhatsApp"
+              <button
+                onClick={openConcierge}
+                className="w-full bg-brand-pink hover:bg-brand-pink/90 text-white py-4 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all rounded-xl active:scale-95"
+                aria-label="Reservar Coffee Tour - Hablar con Concierge"
               >
                 <MessageCircle className="w-5 h-5" />
-                Reservar por WhatsApp
-              </a>
+                Reservar Ahora
+              </button>
             </div>
           </div>
         </div>
