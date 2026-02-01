@@ -22,20 +22,20 @@ const App: React.FC = () => {
         <Experience />
 
         {/* Sección de Educación y Eventos (Nuevos IDs de navegación) */}
-        <section id="eventos" className="py-24 bg-brand-beige/10">
-            <div className="max-w-7xl mx-auto px-6 text-center">
-                <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-4">Servicios</h4>
-                <h2 className="text-4xl font-serif text-brand-dark mb-12">Eventos Empresariales & Educación</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="bg-white p-12 rounded-[2rem] shadow-sm">
-                        <h3 className="text-2xl font-serif mb-4">Eventos Corporativos</h3>
-                        <p className="text-neutral-500 text-sm mb-6">Espacios únicos para equipos que buscan inspiración en la naturaleza.</p>
-                        <a href={`mailto:${CONTACT_INFO.email}`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1">Solicitar Info</a>
+        <section id="eventos" className="py-16 sm:py-20 lg:py-24 bg-brand-beige/10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+                <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">Servicios</h4>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-brand-dark mb-8 sm:mb-10 lg:mb-12">Eventos Empresariales & Educación</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                    <div className="bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] shadow-sm">
+                        <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Eventos Corporativos</h3>
+                        <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Espacios únicos para equipos que buscan inspiración en la naturaleza.</p>
+                        <a href={`mailto:${CONTACT_INFO.email}`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Solicitar Info</a>
                     </div>
-                    <div id="educacion" className="bg-white p-12 rounded-[2rem] shadow-sm">
-                        <h3 className="text-2xl font-serif mb-4">Educación Cafetera</h3>
-                        <p className="text-neutral-500 text-sm mb-6">Cursos especializados en barismo, cata y procesos de café especial.</p>
-                        <a href={`mailto:${CONTACT_INFO.email}`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1">Ver Cursos</a>
+                    <div id="educacion" className="bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] shadow-sm">
+                        <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Educación Cafetera</h3>
+                        <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Cursos especializados en barismo, cata y procesos de café especial.</p>
+                        <a href={`mailto:${CONTACT_INFO.email}`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Ver Cursos</a>
                     </div>
                 </div>
             </div>
@@ -44,20 +44,26 @@ const App: React.FC = () => {
         <LocationSection />
         
         {/* Call to Action Final */}
-        <section className="relative py-40 overflow-hidden bg-brand-dark">
+        <section className="relative py-20 sm:py-28 lg:py-40 overflow-hidden bg-brand-dark">
           <div className="absolute inset-0 z-0">
-             <img src={ASSETS.CAFETALES} className="w-full h-full object-cover opacity-30" alt="Footer Background" />
+             <img
+               src={ASSETS.CAFETALES}
+               className="w-full h-full object-cover opacity-30"
+               alt="Cafetales de La Palma & El Tucán - finca cafetera de especialidad"
+               loading="lazy"
+             />
              <div className="absolute inset-0 bg-brand-pink/20 mix-blend-multiply"></div>
           </div>
-          <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-            <h3 className="text-5xl md:text-7xl font-serif mb-10 text-white italic leading-tight">Vive la Magia del <br/> Café Especial</h3>
-            <p className="text-white/80 mb-16 max-w-2xl mx-auto text-xl font-light leading-relaxed">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif mb-6 sm:mb-8 lg:mb-10 text-white italic leading-tight">Vive la Magia del <br className="hidden sm:block"/> Café Especial</h3>
+            <p className="text-white/80 mb-10 sm:mb-12 lg:mb-16 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl font-light leading-relaxed">
               Donde la naturaleza y la innovación se unen para crear una experiencia transformadora en el corazón del bosque de niebla.
             </p>
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-              <a 
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center">
+              <a
                 href={BOOKING_URL}
-                className="bg-brand-pink text-white px-16 py-6 font-bold uppercase text-xs tracking-[0.3em] hover:bg-white hover:text-brand-pink transition-all inline-block shadow-2xl"
+                className="bg-brand-pink text-white px-10 sm:px-12 lg:px-16 py-4 sm:py-5 lg:py-6 font-bold uppercase text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] hover:bg-white hover:text-brand-pink transition-all inline-block shadow-2xl active:scale-95 w-full sm:w-auto text-center"
+                aria-label="Comprar ticket para el Coffee Tour ahora"
               >
                 Comprar Mi Ticket Ahora
               </a>
@@ -68,29 +74,29 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer id="footer" className="bg-brand-dark py-32 border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-20">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-4 mb-10">
-              <Logo variant="pink" className="w-16 h-16" />
+      <footer id="footer" className="bg-brand-dark py-16 sm:py-24 lg:py-32 border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-20">
+          <div className="col-span-1 sm:col-span-2">
+            <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 lg:mb-10">
+              <Logo variant="pink" className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16" />
               <div className="flex flex-col">
-                <span className="text-xl font-serif font-bold text-white">LA PALMA & EL TUCÁN</span>
-                <span className="text-[10px] uppercase tracking-[0.4em] text-brand-pink font-bold">Coffee Experience</span>
+                <span className="text-lg sm:text-xl font-serif font-bold text-white">LA PALMA & EL TUCÁN</span>
+                <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] text-brand-pink font-bold">Coffee Experience</span>
               </div>
             </div>
-            <p className="text-white/50 max-w-sm leading-relaxed mb-10 text-sm font-light">
+            <p className="text-white/50 max-w-sm leading-relaxed mb-6 sm:mb-8 lg:mb-10 text-sm font-light">
               Estamos ubicados en Zipacón, Cundinamarca, en medio de cafetales de agricultura regenerativa en la finca La Palma & El Tucán.
             </p>
-            <div className="flex gap-10 text-white/40 font-bold text-[10px] uppercase tracking-widest">
+            <div className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 text-white/40 font-bold text-[10px] uppercase tracking-widest">
               <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">Instagram</a>
               <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">Facebook</a>
               <a href={SOCIAL_LINKS.website} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">Website</a>
             </div>
           </div>
-          
+
           <div>
-            <h5 className="text-brand-pink font-bold uppercase tracking-[0.3em] text-[10px] mb-10">Explora</h5>
-            <ul className="space-y-5 text-xs text-white/50 font-medium">
+            <h5 className="text-brand-pink font-bold uppercase tracking-[0.3em] text-[10px] mb-6 sm:mb-8 lg:mb-10">Explora</h5>
+            <ul className="space-y-3 sm:space-y-4 lg:space-y-5 text-xs text-white/50 font-medium">
               <li><a href="#hero" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#tour" className="hover:text-white transition-colors">El Coffee Tour</a></li>
               <li><a href="#experience" className="hover:text-white transition-colors">Gastronomía</a></li>
@@ -99,23 +105,23 @@ const App: React.FC = () => {
           </div>
 
           <div>
-            <h5 className="text-brand-pink font-bold uppercase tracking-[0.3em] text-[10px] mb-10">Contacto</h5>
+            <h5 className="text-brand-pink font-bold uppercase tracking-[0.3em] text-[10px] mb-6 sm:mb-8 lg:mb-10">Contacto</h5>
             <div className="text-white/50 text-xs leading-loose font-medium flex flex-col gap-2">
-              <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-white transition-colors">{CONTACT_INFO.email}</a>
+              <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-white transition-colors break-all sm:break-normal">{CONTACT_INFO.email}</a>
               <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-white transition-colors">{CONTACT_INFO.phoneDisplay}</a>
               <p>{CONTACT_INFO.address}</p>
             </div>
           </div>
         </div>
-        
-        <div className="max-w-7xl mx-auto px-6 mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
-            <div className="text-white/20 text-[9px] uppercase tracking-[0.4em] font-bold">
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24 lg:mt-32 pt-8 sm:pt-10 lg:pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 lg:gap-8">
+            <div className="text-white/20 text-[8px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold text-center md:text-left">
                 &copy; {new Date().getFullYear()} La Palma & El Tucán. Todos los derechos reservados.
             </div>
-            <div className="flex items-center gap-6">
-                <span className="text-white/20 text-[9px] uppercase tracking-[0.4em] font-bold italic">Green Travel Award Winner</span>
-                <div className="w-px h-4 bg-white/10"></div>
-                <span className="text-white/20 text-[9px] uppercase tracking-[0.4em] font-bold">Sustainability First</span>
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6">
+                <span className="text-white/20 text-[8px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold italic">Green Travel Award Winner</span>
+                <div className="w-px h-3 sm:h-4 bg-white/10 hidden sm:block"></div>
+                <span className="text-white/20 text-[8px] sm:text-[9px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold">Sustainability First</span>
             </div>
         </div>
       </footer>

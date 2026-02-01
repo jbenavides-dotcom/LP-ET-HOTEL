@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Palma & El Tucán | Coffee Tour</title>
-  <meta name="description" content="Vive la experiencia del café especial en el bosque de niebla. Coffee Tour de un día a 90 minutos de Bogotá.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- SEO Primary Meta Tags -->
+  <title>Coffee Tour en Colombia | La Palma & El Tucán - Experiencia de Café Especial</title>
+  <meta name="title" content="Coffee Tour en Colombia | La Palma & El Tucán - Experiencia de Café Especial">
+  <meta name="description" content="Vive el mejor Coffee Tour de Colombia a 90 min de Bogotá. Recorre cafetales galardonados, degusta café especial y disfruta almuerzo farm-to-table en el bosque de niebla de Zipacón. Reserva ahora.">
+  <meta name="keywords" content="coffee tour colombia, tour de café bogotá, experiencia café especial, la palma y el tucan, zipacón cundinamarca, café colombiano, turismo cafetero, cata de café, cupping colombia, finca cafetera">
+  <meta name="author" content="La Palma & El Tucán Hotel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://fsardi19.github.io/LP-ET-HOTEL/">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://fsardi19.github.io/LP-ET-HOTEL/">
+  <meta property="og:title" content="Coffee Tour en Colombia | La Palma & El Tucán">
+  <meta property="og:description" content="Vive el mejor Coffee Tour de Colombia. Recorre cafetales galardonados, degusta café especial y disfruta almuerzo farm-to-table. A 90 min de Bogotá.">
+  <meta property="og:image" content="https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/hero-aerial.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="La Palma & El Tucán Hotel">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://fsardi19.github.io/LP-ET-HOTEL/">
+  <meta name="twitter:title" content="Coffee Tour en Colombia | La Palma & El Tucán">
+  <meta name="twitter:description" content="Vive el mejor Coffee Tour de Colombia. Recorre cafetales galardonados, degusta café especial. A 90 min de Bogotá.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/hero-aerial.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dsylu9a7k/image/upload/w_32,h_32/lpet/logo.png">
+  <link rel="apple-touch-icon" href="https://res.cloudinary.com/dsylu9a7k/image/upload/w_180,h_180/lpet/logo.png">
+
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com">
+  <link rel="dns-prefetch" href="https://hotels.cloudbeds.com">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -30,6 +67,8 @@
       }
     }
   </script>
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/index.css">
   <style>
     body { font-family: 'Inter', sans-serif; }
@@ -42,7 +81,92 @@
     .custom-scrollbar::-webkit-scrollbar { width: 4px; }
     .custom-scrollbar::-webkit-scrollbar-track { background: #1a1a1a; }
     .custom-scrollbar::-webkit-scrollbar-thumb { background: #9B3A5A; border-radius: 10px; }
+
+    /* Mejoras de accesibilidad y mobile */
+    @media (max-width: 640px) {
+      html { font-size: 14px; }
+    }
+
+    /* Reducir motion para usuarios que lo prefieran */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristAttraction",
+    "name": "La Palma & El Tucán Coffee Tour",
+    "description": "Experiencia de Coffee Tour en finca cafetera galardonada internacionalmente. Recorrido por cafetales, proceso de producción y degustación de café especial.",
+    "url": "https://fsardi19.github.io/LP-ET-HOTEL/",
+    "image": "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/hero-aerial.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Zipacón",
+      "addressRegion": "Cundinamarca",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "4.7547",
+      "longitude": "-74.3878"
+    },
+    "telephone": "+573209306834",
+    "email": "reservations@lapalmayeltucan.com",
+    "priceRange": "$$",
+    "openingHours": "Mo-Su 08:00-18:00",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Visita guiada a cafetales"},
+      {"@type": "LocationFeatureSpecification", "name": "Cata de café especial"},
+      {"@type": "LocationFeatureSpecification", "name": "Almuerzo farm-to-table"},
+      {"@type": "LocationFeatureSpecification", "name": "Bosque de niebla"}
+    ],
+    "award": "Green Travel Award Winner"
+  }
+  </script>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "La Palma & El Tucán Hotel",
+    "image": "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/hero-aerial.png",
+    "url": "https://www.lapalmayeltucanhotel.com",
+    "telephone": "+573209306834",
+    "email": "reservations@lapalmayeltucan.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Vereda La Palma",
+      "addressLocality": "Zipacón",
+      "addressRegion": "Cundinamarca",
+      "postalCode": "253601",
+      "addressCountry": "CO"
+    },
+    "starRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "numberOfRooms": "10",
+    "petsAllowed": false,
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Coffee Tour"},
+      {"@type": "LocationFeatureSpecification", "name": "Restaurant Farm-to-Table"},
+      {"@type": "LocationFeatureSpecification", "name": "Spa"},
+      {"@type": "LocationFeatureSpecification", "name": "Hiking Trails"}
+    ]
+  }
+  </script>
 </head>
 <body class="bg-brand-light text-brand-dark overflow-x-hidden">
   <div id="root"></div>

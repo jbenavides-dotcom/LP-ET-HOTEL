@@ -35,9 +35,9 @@ const ConciergeChat: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60]">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60]">
       {/* Chat Window */}
-      <div className={`absolute bottom-20 right-0 w-80 md:w-96 glass-morphism rounded-2xl overflow-hidden flex flex-col shadow-2xl transition-all duration-300 transform ${
+      <div className={`absolute bottom-16 sm:bottom-20 right-0 w-[calc(100vw-2rem)] sm:w-80 md:w-96 max-w-[360px] glass-morphism rounded-2xl overflow-hidden flex flex-col shadow-2xl transition-all duration-300 transform ${
         isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none translate-y-10'
       }`}>
         {/* Header */}
@@ -60,7 +60,7 @@ const ConciergeChat: React.FC = () => {
         </div>
 
         {/* Messages */}
-        <div ref={scrollRef} className="h-96 overflow-y-auto p-4 flex flex-col gap-4 custom-scrollbar bg-brand-dark/95">
+        <div ref={scrollRef} className="h-72 sm:h-96 overflow-y-auto p-3 sm:p-4 flex flex-col gap-3 sm:gap-4 custom-scrollbar bg-brand-dark/95">
           {messages.map((msg, i) => (
             <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${
@@ -116,9 +116,10 @@ const ConciergeChat: React.FC = () => {
       </div>
 
       {/* Floating Button */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-brand-pink text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 relative group"
+        className="w-14 h-14 sm:w-16 sm:h-16 bg-brand-pink text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 relative group"
+        aria-label={isOpen ? "Cerrar chat" : "Abrir chat con Concierge AI"}
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageSquare className="w-6 h-6" />}
         {!isOpen && (
