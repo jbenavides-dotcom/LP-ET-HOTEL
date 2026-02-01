@@ -29,10 +29,12 @@ export const ASSETS = {
   EVENTOS: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/eventos.png",
 };
 
-// LINKS PRINCIPALES DE RESERVA
-// Corrección: Eliminados parámetros de sesión (ga_sess_id) para evitar errores de expiración
+// LINKS PRINCIPALES DE RESERVA - WhatsApp directo
+export const WHATSAPP_BOOKING = "https://wa.me/573209306834?text=Hola%2C%20quiero%20reservar%20el%20Coffee%20Tour%20%F0%9F%8C%BF%E2%98%95";
+export const BOOKING_URL = WHATSAPP_BOOKING;
+
+// Cloudbeds solo para alojamiento
 export const CLOUDBEDS_URL = "https://hotels.cloudbeds.com/en/reservation/yB0fEt";
-export const BOOKING_URL = CLOUDBEDS_URL; 
 
 // INFORMACIÓN DE CONTACTO
 export const CONTACT_INFO = {
@@ -51,38 +53,58 @@ export const SOCIAL_LINKS = {
   website: "https://www.lapalmayeltucanhotel.com"
 };
 
-// MENÚ ACTUALIZADO SEGÚN SOLICITUD
+// MENÚ DE NAVEGACIÓN
 export const NAV_LINKS: NavLink[] = [
   { label: 'Home', href: '#hero' },
-  { label: 'Alojamiento', href: CLOUDBEDS_URL },
-  { label: 'Eventos', href: '#eventos' },
-  { label: 'Experiencias', href: '#tour' },
-  { label: 'Educación', href: '#educacion' },
+  { label: 'Coffee Tour', href: '#tour' },
+  { label: 'Experiencia', href: '#experience' },
+  { label: 'Ubicación', href: '#location' },
   { label: 'Contacto', href: '#footer' },
 ];
 
+// INFORMACIÓN DEL COFFEE TOUR
+export const COFFEE_TOUR_INFO = {
+  price: "$492.000 COP",
+  priceNumber: 492000,
+  duration: "~3 horas",
+  schedule: "Todos los días 10:00 AM",
+  minPax: 2,
+  varieties: ["Gesha", "Sidra", "Mokka", "Java", "Bourbon Amarillo"],
+  includes: [
+    "Recorrido guiado por finca cafetera",
+    "Proceso completo del café",
+    "Degustación profesional de cafés especiales",
+    "Introducción a prácticas regenerativas",
+    "Bebida de bienvenida",
+    "Almuerzo completo farm-to-table",
+    "Tiempo libre en espacios naturales",
+    "Transporte desde Bogotá (min. 2 pax)",
+    "Impuestos incluidos"
+  ]
+};
+
 export const TOUR_STEPS = [
   {
-    title: "Origen y Plantación",
-    description: "Recorre nuestros cafetales de agricultura regenerativa y aprende sobre las variedades más exclusivas del mundo.",
+    title: "Recorrido por el Cafetal",
+    description: "Caminata guiada entre cafetales de especialidad. Conoce variedades como Gesha, Sidra y Bourbon Amarillo, el ciclo de vida del cafeto y nuestras prácticas de agricultura regenerativa.",
     image: ASSETS.CAFETALES
   },
   {
-    title: "El Arte del Proceso",
-    description: "Visita nuestra planta de procesamiento donde la innovación y la tradición se unen para crear perfiles únicos.",
+    title: "Proceso del Café",
+    description: "Descubre la cosecha manual, selección, fermentación y secado. Aprende cómo cada proceso crea perfiles de sabor únicos que nos han posicionado como finca de clase mundial.",
     image: ASSETS.PLANTA_CAFE
   },
   {
-    title: "Cata Sensorial",
-    description: "Aprende a identificar las notas, aromas y acidez de un café especial galardonado internacionalmente.",
+    title: "Cata de Especialidad",
+    description: "Degustación guiada de cafés Gesha, Sidra, Mokka, Java y Bourbon Amarillo. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa.",
     image: ASSETS.DEGUSTACION_CAFE
   }
 ];
 
 export const EXPERIENCE_HIGHLIGHTS = [
-  { icon: <Footprints className="w-5 h-5" />, label: 'Caminata por el Bosque de Niebla', image: ASSETS.CAMINATA },
-  { icon: <Utensils className="w-5 h-5" />, label: 'Almuerzo de Origen (Farm-to-Table)', image: ASSETS.COMIDA },
-  { icon: <Sun className="w-5 h-5" />, label: 'Visita a nuestra Huerta Orgánica', image: ASSETS.HUERTA },
+  { icon: <Coffee className="w-5 h-5" />, label: 'Degustación de 5 Variedades Premium', image: ASSETS.DEGUSTACION_CAFE },
+  { icon: <Utensils className="w-5 h-5" />, label: 'Almuerzo Completo Farm-to-Table', image: ASSETS.COMIDA },
+  { icon: <Footprints className="w-5 h-5" />, label: 'Recorrido por Finca Cafetera', image: ASSETS.CAFETALES },
 ];
 
 export const DIRECTIONS = [

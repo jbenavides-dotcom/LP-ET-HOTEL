@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MessageCircle } from 'lucide-react';
 import { NAV_LINKS, BOOKING_URL } from '../constants';
 import Logo from './Logo';
 
@@ -51,10 +51,11 @@ const Navbar: React.FC = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:block bg-brand-pink text-white px-6 sm:px-8 py-3 sm:py-3.5 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-lg active:scale-95"
-            aria-label="Reservar Coffee Tour"
+            className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white px-4 sm:px-6 py-2.5 sm:py-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-widest transition-all shadow-lg active:scale-95 rounded-lg"
+            aria-label="Reservar Coffee Tour por WhatsApp"
           >
-            Reservar Tour
+            <MessageCircle className="w-4 h-4" />
+            Reservar
           </a>
 
           <button
@@ -87,10 +88,11 @@ const Navbar: React.FC = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-pink text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform"
+            className="bg-green-600 text-white px-6 py-4 sm:py-5 text-center text-xs font-bold uppercase tracking-widest mt-4 active:scale-95 transition-transform rounded-xl flex items-center justify-center gap-2"
             onClick={() => setIsOpen(false)}
           >
-            Reservar Ahora
+            <MessageCircle className="w-5 h-5" />
+            Reservar por WhatsApp
           </a>
         </div>
       </div>

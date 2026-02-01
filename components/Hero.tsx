@@ -1,17 +1,17 @@
 
 import React from 'react';
-import { BOOKING_URL, ASSETS } from '../constants';
-import { ArrowRight, MapPin, Coffee as CoffeeIcon, Star } from 'lucide-react';
+import { BOOKING_URL, ASSETS, COFFEE_TOUR_INFO, CONTACT_INFO } from '../constants';
+import { MessageCircle, MapPin, Coffee as CoffeeIcon, Star, Clock, Users } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Lazy Loading */}
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={ASSETS.HERO_BG}
           className="w-full h-full object-cover"
-          alt="Vista aérea de la finca cafetera La Palma & El Tucán en Zipacón, Colombia - Coffee Tour"
+          alt="Coffee Tour en finca cafetera La Palma & El Tucán - Zipacón Colombia"
           loading="eager"
           fetchPriority="high"
         />
@@ -21,22 +21,40 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 w-full max-w-7xl px-4 sm:px-6 py-20 sm:py-0">
         <div className="max-w-3xl">
-          {/* Badge - Responsive */}
-          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-full bg-brand-pink text-white text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold mb-6 sm:mb-8 animate-fade-in">
+          {/* Badge con precio */}
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-3 sm:px-5 py-2 rounded-full bg-brand-pink text-white text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold mb-6 sm:mb-8 animate-fade-in">
             <CoffeeIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            <span>Coffee Tour de Un Día</span>
+            <span>Coffee Tour – Del Árbol a la Taza</span>
           </div>
 
-          {/* H1 - SEO Optimizado y Responsive */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif mb-6 sm:mb-8 leading-[1.1] sm:leading-[1.05] text-white">
-            El Mejor <span className="text-brand-beige">Coffee Tour</span> <br className="hidden sm:block" />
-            <span className="italic">de Colombia</span>
+          {/* H1 - SEO Transaccional */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mb-4 sm:mb-6 leading-[1.1] sm:leading-[1.05] text-white">
+            Reserva tu <span className="text-brand-beige">Coffee Tour</span> <br className="hidden sm:block" />
+            <span className="italic">en Finca de Clase Mundial</span>
           </h1>
 
-          {/* Descripción - Responsive */}
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-12 max-w-xl font-light leading-relaxed">
-            Descubre los secretos de una finca cafetera de talla mundial. Recorre nuestros cafetales y vive una experiencia sensorial inolvidable a solo <strong className="text-white font-medium">90 minutos de Bogotá</strong>.
+          {/* Propuesta de valor clara */}
+          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-xl font-light leading-relaxed">
+            Vive una experiencia auténtica en una finca cafetera galardonada. Degusta cafés <strong className="text-white font-medium">Gesha, Sidra, Mokka, Java y Bourbon Amarillo</strong>. Incluye transporte desde Bogotá, almuerzo farm-to-table y recorrido guiado.
           </p>
+
+          {/* Precio destacado */}
+          <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
+            <div className="bg-white/10 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-xl border border-white/20">
+              <span className="text-white/70 text-xs uppercase tracking-wider block">Precio por persona</span>
+              <span className="text-white text-2xl sm:text-3xl font-serif font-bold">{COFFEE_TOUR_INFO.price}</span>
+            </div>
+            <div className="flex flex-col gap-1 text-white/80 text-xs sm:text-sm">
+              <span className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-brand-pink" />
+                {COFFEE_TOUR_INFO.duration} de experiencia
+              </span>
+              <span className="flex items-center gap-2">
+                <Users className="w-4 h-4 text-brand-pink" />
+                Todos los días 10:00 AM
+              </span>
+            </div>
+          </div>
 
           {/* Rating Badge - Social Proof */}
           <div className="flex items-center gap-2 mb-6 sm:mb-8">
@@ -48,39 +66,41 @@ const Hero: React.FC = () => {
             <span className="text-white/80 text-xs sm:text-sm font-medium">4.9/5 - 127+ reseñas</span>
           </div>
 
-          {/* CTAs - Mobile First */}
+          {/* CTA Principal - WhatsApp */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
             <a
               href={BOOKING_URL}
-              className="bg-brand-pink text-white px-8 sm:px-10 py-4 sm:py-5 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 hover:scale-105 hover:bg-white hover:text-brand-pink transition-all shadow-2xl active:scale-95"
-              aria-label="Reservar Coffee Tour ahora"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 hover:bg-green-500 text-white px-8 sm:px-10 py-4 sm:py-5 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 hover:scale-105 transition-all shadow-2xl active:scale-95 rounded-lg"
+              aria-label="Reservar Coffee Tour por WhatsApp"
             >
-              Reservar Ahora
-              <ArrowRight className="w-4 h-4" />
+              <MessageCircle className="w-5 h-5" />
+              Reservar por WhatsApp
             </a>
             <div className="flex items-center justify-center sm:justify-start gap-3 sm:gap-4 text-white/80 px-4 sm:px-6 py-3 sm:py-4 glass-morphism rounded-xl">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-brand-pink flex-shrink-0" />
-              <span className="text-xs uppercase tracking-widest font-medium">Zipacón, Cundinamarca</span>
+              <span className="text-xs uppercase tracking-widest font-medium">90 min desde Bogotá</span>
             </div>
           </div>
 
-          {/* Trust Badges - Mobile */}
-          <div className="mt-8 sm:mt-12 flex flex-wrap items-center gap-4 sm:gap-6 text-white/60 text-[10px] sm:text-xs uppercase tracking-wider">
+          {/* Trust Badges */}
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4 sm:gap-6 text-white/60 text-[10px] sm:text-xs uppercase tracking-wider">
             <span className="flex items-center gap-2">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              Green Travel Award
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              Cupos Limitados
             </span>
             <span className="hidden sm:inline">•</span>
-            <span>+30 países de exportación</span>
+            <span>Transporte incluido</span>
             <span className="hidden sm:inline">•</span>
-            <span>Agricultura regenerativa</span>
+            <span>Almuerzo incluido</span>
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator - Hidden on very small screens */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-4 text-white/40 animate-bounce">
-        <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Scroll</span>
+        <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Descubre más</span>
         <div className="w-px h-8 sm:h-10 bg-white/20"></div>
       </div>
     </section>

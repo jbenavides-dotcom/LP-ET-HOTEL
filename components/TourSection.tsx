@@ -1,35 +1,35 @@
 
 import React from 'react';
-import { TOUR_STEPS, BOOKING_URL, ASSETS } from '../constants';
-import { Award, ChevronRight, Clock, Users, Leaf } from 'lucide-react';
+import { TOUR_STEPS, BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
+import { Award, MessageCircle, Clock, Users, Leaf, Check, Coffee } from 'lucide-react';
 
 const TourSection: React.FC = () => {
   return (
     <section id="tour" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Header - SEO Optimizado */}
+        {/* Header - SEO Transaccional */}
         <header className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-20">
-          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-4 block">La Experiencia</span>
+          <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-4 block">Coffee Tour</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">
-            Tu Día en la Finca Cafetera
+            Del Árbol a la Taza
           </h2>
-          <p className="text-neutral-600 font-light text-sm sm:text-base">
-            Sumérgete en el mundo de los cafés especiales. Desde la cereza en el árbol hasta la taza perfecta.
+          <p className="text-neutral-600 font-light text-sm sm:text-base max-w-lg mx-auto">
+            Experiencia guiada e inmersiva en fincas de café de especialidad. Descubre todo el proceso del café en un entorno de bosque de niebla.
           </p>
 
           {/* Quick Info Badges */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-6 sm:mt-8">
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-600">
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-600 bg-white px-4 py-2 rounded-full shadow-sm">
               <Clock className="w-4 h-4 text-brand-pink" />
-              <span>6-8 horas</span>
+              <span>{COFFEE_TOUR_INFO.duration}</span>
             </div>
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-600">
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-600 bg-white px-4 py-2 rounded-full shadow-sm">
               <Users className="w-4 h-4 text-brand-pink" />
-              <span>Grupos pequeños</span>
+              <span>Todos los días 10 AM</span>
             </div>
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-600">
-              <Leaf className="w-4 h-4 text-brand-pink" />
-              <span>Agricultura regenerativa</span>
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-neutral-600 bg-white px-4 py-2 rounded-full shadow-sm">
+              <Coffee className="w-4 h-4 text-brand-pink" />
+              <span>5 variedades premium</span>
             </div>
           </div>
         </header>
@@ -91,34 +91,49 @@ const TourSection: React.FC = () => {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-brand-dark mb-4 sm:mb-6 leading-tight">
-              Innovación técnica en <br className="hidden sm:block"/>
-              <span className="italic text-brand-pink">cada grano</span>
+              ¿Qué incluye tu <br className="hidden sm:block"/>
+              <span className="italic text-brand-pink">Coffee Tour?</span>
             </h3>
             <p className="text-neutral-600 mb-6 sm:mb-8 leading-relaxed font-light text-base sm:text-lg">
-              Nuestro Coffee Tour no es solo una caminata; es una inmersión técnica y sensorial profunda. Conoce nuestros procesos únicos de fermentación que nos han posicionado como líderes en la industria del café de especialidad.
+              Una experiencia completa que incluye transporte, alimentación y acceso exclusivo a nuestra finca de clase mundial. Todo lo que necesitas para un día inolvidable.
             </p>
 
-            {/* Features List - Responsive Grid */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-10">
-              {['Visita al Beneficio', 'Degustación de Lotes', 'Recorrido Cafetales', 'Bio-Sostenibilidad'].map(item => (
+            {/* Qué incluye - Lista completa */}
+            <ul className="grid grid-cols-1 gap-2 sm:gap-3 mb-8 sm:mb-10">
+              {COFFEE_TOUR_INFO.includes.map((item, idx) => (
                 <li
-                  key={item}
-                  className="flex items-center gap-3 text-sm font-medium text-brand-dark bg-white p-3 sm:p-4 rounded-lg sm:rounded-xl border border-brand-beige/10 shadow-sm"
+                  key={idx}
+                  className="flex items-center gap-3 text-sm font-medium text-brand-dark"
                 >
-                  <div className="w-2 h-2 rounded-full bg-brand-pink flex-shrink-0"></div>
+                  <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
 
-            {/* CTA */}
-            <a
-              href={BOOKING_URL}
-              className="inline-flex items-center gap-2 text-brand-pink font-bold uppercase text-[10px] tracking-widest border-b-2 border-brand-pink pb-2 hover:gap-4 transition-all"
-              aria-label="Reservar mi lugar en el Coffee Tour"
-            >
-              Reservar Mi Lugar <ChevronRight className="w-4 h-4" />
-            </a>
+            {/* Precio y CTA */}
+            <div className="bg-brand-dark rounded-2xl p-6 sm:p-8">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-4">
+                <div>
+                  <span className="text-white/60 text-xs uppercase tracking-wider">Precio por persona</span>
+                  <p className="text-white text-3xl sm:text-4xl font-serif font-bold">{COFFEE_TOUR_INFO.price}</p>
+                </div>
+                <div className="text-white/60 text-xs">
+                  <p>Impuestos incluidos</p>
+                  <p>Mínimo 2 personas</p>
+                </div>
+              </div>
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-green-600 hover:bg-green-500 text-white py-4 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all rounded-xl active:scale-95"
+                aria-label="Reservar Coffee Tour por WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Reservar por WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>

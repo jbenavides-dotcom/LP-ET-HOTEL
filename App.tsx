@@ -7,7 +7,8 @@ import TourSection from './components/TourSection';
 import LocationSection from './components/LocationSection';
 import ConciergeChat from './components/ConciergeChat';
 import Logo from './components/Logo';
-import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO } from './constants';
+import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
+import { MessageCircle } from 'lucide-react';
 
 const App: React.FC = () => {
   return (
@@ -43,31 +44,47 @@ const App: React.FC = () => {
 
         <LocationSection />
         
-        {/* Call to Action Final */}
+        {/* Call to Action Final - Transaccional */}
         <section className="relative py-20 sm:py-28 lg:py-40 overflow-hidden bg-brand-dark">
           <div className="absolute inset-0 z-0">
              <img
                src={ASSETS.CAFETALES}
                className="w-full h-full object-cover opacity-30"
-               alt="Cafetales de La Palma & El Tucán - finca cafetera de especialidad"
+               alt="Reserva tu Coffee Tour en La Palma & El Tucán"
                loading="lazy"
              />
              <div className="absolute inset-0 bg-brand-pink/20 mix-blend-multiply"></div>
           </div>
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-serif mb-6 sm:mb-8 lg:mb-10 text-white italic leading-tight">Vive la Magia del <br className="hidden sm:block"/> Café Especial</h3>
-            <p className="text-white/80 mb-10 sm:mb-12 lg:mb-16 max-w-2xl mx-auto text-base sm:text-lg lg:text-xl font-light leading-relaxed">
-              Donde la naturaleza y la innovación se unen para crear una experiencia transformadora en el corazón del bosque de niebla.
+            <span className="inline-block bg-green-600/20 text-green-400 px-4 py-2 rounded-full text-xs uppercase tracking-wider font-bold mb-6">
+              Cupos Limitados - Reserva Hoy
+            </span>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-6 sm:mb-8 text-white leading-tight">
+              Reserva tu Coffee Tour <br className="hidden sm:block"/>
+              <span className="italic text-brand-beige">por WhatsApp</span>
+            </h3>
+            <p className="text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed">
+              Degusta cafés Gesha, Sidra, Mokka, Java y Bourbon Amarillo. Incluye transporte desde Bogotá, almuerzo farm-to-table y recorrido guiado.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center">
+
+            {/* Precio destacado */}
+            <div className="inline-block bg-white/10 backdrop-blur-sm px-8 py-4 rounded-2xl border border-white/20 mb-8">
+              <span className="text-white/60 text-xs uppercase tracking-wider block">Precio por persona</span>
+              <span className="text-white text-4xl sm:text-5xl font-serif font-bold">{COFFEE_TOUR_INFO.price}</span>
+            </div>
+
+            <div className="flex flex-col gap-4 justify-center items-center">
               <a
                 href={BOOKING_URL}
-                className="bg-brand-pink text-white px-10 sm:px-12 lg:px-16 py-4 sm:py-5 lg:py-6 font-bold uppercase text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] hover:bg-white hover:text-brand-pink transition-all inline-block shadow-2xl active:scale-95 w-full sm:w-auto text-center"
-                aria-label="Comprar ticket para el Coffee Tour ahora"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-600 hover:bg-green-500 text-white px-10 sm:px-16 py-5 sm:py-6 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all shadow-2xl active:scale-95 w-full sm:w-auto rounded-xl"
+                aria-label="Reservar Coffee Tour por WhatsApp"
               >
-                Comprar Mi Ticket Ahora
+                <MessageCircle className="w-6 h-6" />
+                Reservar por WhatsApp
               </a>
-              <span className="text-white/40 text-[10px] uppercase tracking-widest font-bold">Cupos Limitados</span>
+              <span className="text-white/50 text-xs">Respuesta inmediata • Todos los días 10:00 AM</span>
             </div>
           </div>
         </section>
