@@ -57,7 +57,7 @@ export const CONTACT_INFO = {
   phoneInfo: "+573209306834",
   phoneInfoDisplay: "(+57) 320 930 6834",
   address: "Zipacón, Cundinamarca, Colombia",
-  googleMaps: "https://maps.app.goo.gl/v8NZcqQDGpFoUfPV7",
+  googleMaps: "https://www.google.com/maps/search/La+Palma+y+El+Tucan+Hotel+Zipacon+Cundinamarca",
   // WhatsApp de reservas (humano)
   whatsappReservas: "https://wa.me/573189565617",
   // WhatsApp de info (AI)

@@ -59,10 +59,10 @@ const LocationSection: React.FC = () => {
                         Estamos ubicados en el municipio de Zipacón, Cundinamarca. Un refugio de paz a solo 90 minutos de la capital.
                     </p>
                     <a
-                        href="https://maps.app.goo.gl/v8NZcqQDGpFoUfPV7"
+                        href="https://www.google.com/maps/search/La+Palma+y+El+Tucan+Hotel+Zipacon+Cundinamarca"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-brand-pink text-white px-8 sm:px-10 lg:px-12 py-4 sm:py-5 font-bold uppercase text-[10px] tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-xl active:scale-95"
+                        className="bg-brand-pink text-white px-8 sm:px-10 lg:px-12 py-4 sm:py-5 font-bold uppercase text-[10px] tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-xl active:scale-95 rounded-lg"
                         aria-label="Ver ubicación de La Palma & El Tucán en Google Maps"
                     >
                         Ver en Google Maps
