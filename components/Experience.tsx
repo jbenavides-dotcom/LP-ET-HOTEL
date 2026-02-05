@@ -26,14 +26,14 @@ const Experience: React.FC = () => {
             </div>
             {/* Badge - Only visible on large screens */}
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-beige rounded-full items-center justify-center p-8 hidden lg:flex text-center">
-               <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">100% Organico & Local</span>
+               <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">100% Orgánico & Local</span>
             </div>
           </div>
 
           {/* Content */}
           <div className="order-1 lg:order-2">
             <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-4 sm:mb-6">El Almuerzo</h4>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif mb-6 sm:mb-8 leading-tight">De la Huerta <br className="hidden sm:block"/> a tu Mesa.</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif mb-6 sm:mb-8 leading-tight">De la Huerta <br className="hidden sm:block"/> a tu Mesa</h2>
             <p className="text-neutral-600 text-base sm:text-lg mb-8 sm:mb-10 leading-relaxed font-light">
               Nuestra experiencia culinaria es una extensión de nuestra filosofía. Disfruta de un almuerzo artesanal preparado con ingredientes frescos cultivados en nuestra propia huerta orgánica.
             </p>

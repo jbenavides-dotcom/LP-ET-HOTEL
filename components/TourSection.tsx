@@ -11,7 +11,7 @@ const TourSection: React.FC = () => {
         {/* ¿POR QUÉ EL COFFEE TRAIL? */}
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24">
           <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">¿Por qué La Palma & El Tucán?</h4>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un tour de café.</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un tour de café</h2>
           <p className="text-neutral-600 font-light text-base sm:text-lg mb-8 sm:mb-10">Es una experiencia que transforma tu forma de consumir.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-left">
