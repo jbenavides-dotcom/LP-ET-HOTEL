@@ -116,7 +116,7 @@ export const TOUR_STEPS = [
     image: ASSETS.PLANTA_CAFE
   },
   {
-    title: "Cata de Especialidad",
+    title: "Degustación de Especialidad",
     description: "Degustación guiada de cafés Gesha, Sidra, Mokka, Java y Bourbon Amarillo. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa.",
     image: ASSETS.DEGUSTACION_CAFE
   }

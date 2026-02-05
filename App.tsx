@@ -34,7 +34,7 @@ const App: React.FC = () => {
                     </div>
                     <div id="educacion" className="bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] shadow-sm">
                         <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Educación Cafetera</h3>
-                        <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Cursos especializados en barismo, cata y procesos de café especial.</p>
+                        <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Cursos especializados en barismo, degustación de cafés de especialidad y procesos de café.</p>
                         <a href={`mailto:${CONTACT_INFO.email}?subject=Información sobre cursos de café`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Solicitar Información</a>
                     </div>
                 </div>
@@ -42,7 +42,44 @@ const App: React.FC = () => {
         </section>
 
         <LocationSection />
-        
+
+        {/* Sección Upsell - Hospedaje */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+              <div className="relative rounded-2xl sm:rounded-[3rem] overflow-hidden aspect-[4/3]">
+                <img
+                  src={ASSETS.CABANA}
+                  alt="Cabaña eco-luxury en La Palma & El Tucán Hotel"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              </div>
+              <div>
+                <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">Hospedaje</h4>
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-brand-dark mb-4 sm:mb-6 leading-tight">
+                  ¿Quieres extender <br className="hidden sm:block"/><span className="italic text-brand-pink">la experiencia?</span>
+                </h2>
+                <p className="text-neutral-600 text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 font-light">
+                  Hospédate en La Palma & El Tucán Hotel y vive el Coffee Tour con más calma. Despierta entre cafetales, disfruta el bosque de niebla y deja que el café haga parte de tu descanso.
+                </p>
+                <p className="text-neutral-500 text-sm mb-8">
+                  Cabañas privadas inmersas en la naturaleza, desayuno incluido y acceso a todos nuestros espacios naturales.
+                </p>
+                <a
+                  href="https://www.lapalmayeltucanhotel.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-brand-pink text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-brand-dark transition-all shadow-lg active:scale-95"
+                >
+                  Ver opciones de alojamiento
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Call to Action Final - Transaccional */}
         <section className="relative py-20 sm:py-28 lg:py-40 overflow-hidden bg-brand-dark">
           <div className="absolute inset-0 z-0">
@@ -63,7 +100,7 @@ const App: React.FC = () => {
               <span className="italic text-brand-beige">por WhatsApp</span>
             </h3>
             <p className="text-white/80 mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed">
-              Degusta cafés Gesha, Sidra, Mokka, Java y Bourbon Amarillo. Incluye transporte desde Bogotá, almuerzo farm-to-table y recorrido guiado.
+              Este no es un tour turístico más. Es una invitación a conectar con el origen del café, la naturaleza y el propósito detrás de cada taza.
             </p>
 
             {/* Precio destacado */}

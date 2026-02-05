@@ -21,15 +21,23 @@ const Hero: React.FC = () => {
       <div className="relative z-10 w-full max-w-7xl px-4 sm:px-6 pt-32 sm:pt-24 pb-20">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 rounded-full bg-brand-pink text-white text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold mb-6 sm:mb-8 animate-fade-in">
-            <CoffeeIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Coffee Tour & Estancia Luxury
+            <CoffeeIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Finca Cafetera de Clase Mundial
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif mb-4 sm:mb-6 leading-[1.1] sm:leading-[1.05] text-white">
-            Un Viaje al <br /> <span className="italic text-brand-beige">Origen del Café.</span>
+            El Coffee Tour más <br /> <span className="italic text-brand-beige">especial de Colombia.</span>
           </h1>
 
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 max-w-2xl font-light leading-relaxed">
+            A solo 90 minutos de Bogotá, en una finca cafetera de clase mundial.
+          </p>
+
+          <p className="text-base sm:text-lg text-white/80 mb-6 sm:mb-8 max-w-xl font-light leading-relaxed">
+            Vive una experiencia inmersiva donde el mejor café de Colombia, la naturaleza y la regeneración se encuentran. Conoce el proceso completo del café y prueba variedades premiadas a nivel internacional.
+          </p>
+
           {/* PRECIO Y HORARIO */}
-          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
             <div className="bg-white/10 backdrop-blur-sm px-4 sm:px-6 py-3 rounded-xl border border-white/20">
               <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">{COFFEE_TOUR_INFO.price}</span>
               <span className="text-white/80 text-xs sm:text-sm ml-2">{COFFEE_TOUR_INFO.priceNote}</span>
@@ -41,22 +49,13 @@ const Hero: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-brand-pink" />
-                <span>{COFFEE_TOUR_INFO.departurePoint}</span>
+                <span>Desde {COFFEE_TOUR_INFO.departurePoint}</span>
               </div>
             </div>
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl text-white/90 mb-4 sm:mb-6 max-w-xl font-light leading-relaxed">
-            Descubre los secretos de una finca de talla mundial. Recorre nuestros cafetales y vive una experiencia sensorial inolvidable a solo 90 minutos de Bogotá.
-          </p>
-
-          {/* INCLUYE - RESUMEN */}
-          <p className="text-white/70 text-xs sm:text-sm mb-6 sm:mb-8">
-            Incluye: transporte + almuerzo + degustación de cafés premium
-          </p>
-
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* CTA PRINCIPAL - WHATSAPP */}
+            {/* CTA PRINCIPAL */}
             <a
               href={BOOKING_URL}
               target="_blank"
@@ -64,7 +63,7 @@ const Hero: React.FC = () => {
               className="bg-[#25D366] text-white px-6 sm:px-8 py-4 sm:py-5 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 hover:scale-105 hover:bg-[#128C7E] transition-all shadow-2xl rounded-lg active:scale-95"
             >
               <MessageCircle className="w-5 h-5" />
-              Reservar por WhatsApp
+              Reserva tu Coffee Tour ahora
               <ArrowRight className="w-4 h-4" />
             </a>
 

@@ -1,18 +1,43 @@
 
 import React from 'react';
 import { TOUR_STEPS, BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
-import { Award, ChevronRight, Check, MessageCircle } from 'lucide-react';
+import { Award, ChevronRight, Check, MessageCircle, Star } from 'lucide-react';
 
 const TourSection: React.FC = () => {
   return (
     <section id="tour" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
+
+        {/* ¿POR QUÉ EL COFFEE TRAIL? */}
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24">
+          <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">¿Por qué La Palma & El Tucán?</h4>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un tour de café.</h2>
+          <p className="text-neutral-600 font-light text-base sm:text-lg mb-8 sm:mb-10">Es una experiencia que transforma tu forma de consumir.</p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-left">
+            {[
+              "Finca cafetera reconocida mundialmente por sus cafés especiales",
+              "Recorrido completo: de la tierra a la taza",
+              "Degustación profesional de variedades exclusivas",
+              "Naturaleza viva en bosque de niebla",
+              "Grupos pequeños y experiencia personalizada",
+              "Agricultura regenerativa y sostenibilidad"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-3 bg-white p-4 sm:p-5 rounded-xl shadow-sm">
+                <Star className="w-4 h-4 text-brand-pink mt-0.5 flex-shrink-0" />
+                <span className="text-neutral-700 text-sm">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* TU DÍA EN LA FINCA */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16 lg:mb-20">
           <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">La Experiencia</h4>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">Tu Día en la Finca</h2>
           <p className="text-neutral-600 font-light text-sm sm:text-base">Sumérgete en el mundo de los cafés especiales. Desde la cereza en el árbol hasta la taza perfecta.</p>
 
-          {/* PRECIO Y HORARIO REPETIDO */}
+          {/* PRECIO Y HORARIO */}
           <div className="mt-6 sm:mt-8 flex flex-col items-center gap-2 bg-white px-6 sm:px-8 py-4 sm:py-5 rounded-2xl shadow-sm">
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <span className="text-xl sm:text-2xl font-bold text-brand-pink">{COFFEE_TOUR_INFO.price}</span>
