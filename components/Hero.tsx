@@ -24,8 +24,8 @@ const Hero: React.FC = () => {
             <CoffeeIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Finca Cafetera de Clase Mundial
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-serif mb-4 sm:mb-6 leading-[1.1] sm:leading-[1.05] text-white">
-            El Coffee Tour más <br /> <span className="italic text-brand-beige">especial de Colombia.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif mb-4 sm:mb-6 leading-[1.15] text-white">
+            El Coffee Tour más <br className="hidden sm:block" /><span className="italic text-brand-beige">especial de Colombia.</span>
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-4 sm:mb-6 max-w-2xl font-light leading-relaxed">
