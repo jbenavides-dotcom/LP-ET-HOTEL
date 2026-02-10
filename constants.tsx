@@ -13,6 +13,11 @@ import {
 } from 'lucide-react';
 
 export const ASSETS = {
+  // Logos oficiales
+  LOGO_HOTEL: "https://res.cloudinary.com/dsylu9a7k/image/upload/v1770761972/lpet/logo-hotel-oficial.png",
+  LOGO_AMPERSAND: "https://res.cloudinary.com/dsylu9a7k/image/upload/v1770761984/lpet/logo-ampersand-circle.png",
+  LOGO_CAFE_NATURALEZA: "https://res.cloudinary.com/dsylu9a7k/image/upload/v1770762067/lpet/logo-cafe-naturaleza.png",
+  // Imágenes
   HERO_BG: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/hero-aerial.png",
   CAFETALES: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/cafetales.png",
   DEGUSTACION_CAFE: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/degustacion-cafe.png",
