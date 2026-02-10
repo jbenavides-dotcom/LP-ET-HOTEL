@@ -67,8 +67,10 @@ export const CONTACT_INFO = {
 // REDES SOCIALES
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/lapalmayeltucan_hotel/",
-  facebook: "https://www.facebook.com/lapalmayeltucan/",
-  website: "https://www.lapalmayeltucanhotel.com"
+  facebook: "https://www.facebook.com/lapalmayeltucanboutiquehotel/",
+  tiktok: "https://www.tiktok.com/@lapalmayeltucan_hotel",
+  linkedin: "https://www.linkedin.com/company/la-palma-el-tuc%C3%A1n-hotel/",
+  website: "https://lapalmayeltucanhotel.com"
 };
 
 // MENÚ DE NAVEGACIÓN
@@ -85,20 +87,20 @@ export const COFFEE_TOUR_INFO = {
   price: "$492.000",
   priceNote: "COP por persona",
   priceNumber: 492000,
-  duration: "~3 horas",
   schedule: "Todos los días",
-  time: "8:00 AM",
+  time: "7:30 AM",
   departurePoint: "Libertario Coffee Roasters - Calle 85",
   departureAddress: "Kr 13 #85-13, Chapinero, Bogotá",
   minPeople: 2,
-  varieties: ["Gesha", "Sidra", "Mokka", "Java", "Bourbon Amarillo"],
+  varieties: ["Gesha", "Sidra", "Mokka", "Java"],
   includes: [
     "Transporte desde Libertario Calle 85 (mín. 2 personas)",
-    "Recorrido guiado por cafetales",
-    "Proceso completo del café",
-    "Degustación de 5 variedades premium",
-    "Almuerzo farm-to-table",
     "Bebida de bienvenida",
+    "Recorrido guiado por cafetales y planta de procesamiento",
+    "Visita a planta de insumos orgánicos, compostaje y Biochar",
+    "Visita al laboratorio de catación",
+    "Degustación de 3 variedades de café de especialidad",
+    "Almuerzo farm-to-table",
     "Tiempo libre en naturaleza",
     "Impuestos incluidos"
   ]
@@ -107,7 +109,7 @@ export const COFFEE_TOUR_INFO = {
 export const TOUR_STEPS = [
   {
     title: "Recorrido por el Cafetal",
-    description: "Caminata guiada entre cafetales de especialidad. Conoce variedades como Gesha, Sidra y Bourbon Amarillo, el ciclo de vida del cafeto y nuestras prácticas de agricultura regenerativa.",
+    description: "Caminata guiada entre cafetales de especialidad. Conoce variedades como Gesha, Sidra, Mokka y Java, el ciclo de vida del cafeto y nuestras prácticas de agricultura regenerativa.",
     image: ASSETS.CAFETALES
   },
   {
@@ -117,13 +119,13 @@ export const TOUR_STEPS = [
   },
   {
     title: "Degustación de Especialidad",
-    description: "Degustación guiada de cafés Gesha, Sidra, Mokka, Java y Bourbon Amarillo. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa.",
+    description: "Degustación guiada de 3 cafés de especialidad: Gesha, Sidra y Mokka. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa.",
     image: ASSETS.DEGUSTACION_CAFE
   }
 ];
 
 export const EXPERIENCE_HIGHLIGHTS = [
-  { icon: <Coffee className="w-5 h-5" />, label: 'Degustación de 5 Variedades Premium', image: ASSETS.DEGUSTACION_CAFE },
+  { icon: <Coffee className="w-5 h-5" />, label: 'Degustación de 3 Variedades Premium', image: ASSETS.DEGUSTACION_CAFE },
   { icon: <Utensils className="w-5 h-5" />, label: 'Almuerzo Completo Farm-to-Table', image: ASSETS.COMIDA },
   { icon: <Footprints className="w-5 h-5" />, label: 'Recorrido por Finca Cafetera', image: ASSETS.CAFETALES },
 ];

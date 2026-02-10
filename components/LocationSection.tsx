@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { DIRECTIONS, ASSETS } from '../constants';
-import { MapPin, Navigation, Waves, Trees } from 'lucide-react';
+import { ASSETS } from '../constants';
+import { Navigation } from 'lucide-react';
 
 const LocationSection: React.FC = () => {
   return (
@@ -37,32 +37,21 @@ const LocationSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Directions Card */}
+        {/* Ubicación Card */}
         <div className="bg-brand-dark rounded-2xl sm:rounded-[2.5rem] lg:rounded-[4rem] p-6 sm:p-10 lg:p-16 xl:p-24 text-white overflow-hidden relative">
             <div className="absolute top-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-brand-pink/10 blur-[100px] rounded-full"></div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 relative z-10">
-                <div>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif mb-6 sm:mb-8 lg:mb-10 italic">¿Cómo Llegar?</h2>
-                    <div className="space-y-5 sm:space-y-6 lg:space-y-8">
-                        {DIRECTIONS.map((dir, idx) => (
-                            <div key={idx} className="flex gap-4 sm:gap-6 group items-start">
-                                <span className="text-brand-pink font-serif text-2xl sm:text-3xl italic opacity-40 group-hover:opacity-100 transition-opacity flex-shrink-0">{idx + 1}.</span>
-                                <p className="text-white/70 text-xs sm:text-sm leading-relaxed pt-1 sm:pt-2 group-hover:text-white transition-colors">{dir}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="bg-white/5 p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem] border border-white/10 flex flex-col items-center justify-center text-center">
-                    <Navigation className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 text-brand-pink mb-6 sm:mb-8 lg:mb-10" />
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-serif mb-4 sm:mb-6">Ubicación Estratégica</h3>
-                    <p className="text-white/60 mb-8 sm:mb-10 lg:mb-12 text-xs sm:text-sm leading-relaxed">
-                        Estamos ubicados en el municipio de Zipacón, Cundinamarca. Un refugio de paz a solo 90 minutos de la capital.
+            <div className="relative z-10 max-w-xl mx-auto">
+                <div className="bg-white/5 p-8 sm:p-10 lg:p-16 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem] border border-white/10 flex flex-col items-center justify-center text-center">
+                    <Navigation className="w-12 h-12 sm:w-14 sm:h-14 lg:w-20 lg:h-20 text-brand-pink mb-6 sm:mb-8 lg:mb-10" />
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-4 sm:mb-6 italic">Ubicación Estratégica</h2>
+                    <p className="text-white/60 mb-8 sm:mb-10 lg:mb-12 text-sm sm:text-base leading-relaxed max-w-md">
+                        Estamos ubicados en el municipio de Zipacón, Cundinamarca. Un refugio de paz a solo 90 minutos de Bogotá.
                     </p>
                     <a
                         href="https://www.google.com/maps/search/La+Palma+y+El+Tucan+Hotel+Zipacon+Cundinamarca"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-brand-pink text-white px-8 sm:px-10 lg:px-12 py-4 sm:py-5 font-bold uppercase text-[10px] tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-xl active:scale-95 rounded-lg"
+                        className="bg-brand-pink text-white px-10 sm:px-12 lg:px-14 py-4 sm:py-5 font-bold uppercase text-[10px] sm:text-xs tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-xl active:scale-95 rounded-xl"
                         aria-label="Ver ubicación de La Palma & El Tucán en Google Maps"
                     >
                         Ver en Google Maps

@@ -24,10 +24,6 @@ const Experience: React.FC = () => {
                 loading="lazy"
               />
             </div>
-            {/* Badge - Only visible on large screens */}
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-beige rounded-full items-center justify-center p-8 hidden lg:flex text-center">
-               <span className="text-[10px] font-bold uppercase tracking-widest text-brand-dark">100% Orgánico & Local</span>
-            </div>
           </div>
 
           {/* Content */}

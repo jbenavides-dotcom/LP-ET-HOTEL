@@ -43,8 +43,6 @@ const TourSection: React.FC = () => {
               <span className="text-xl sm:text-2xl font-bold text-brand-pink">{COFFEE_TOUR_INFO.price}</span>
               <span className="text-neutral-400 hidden sm:inline">|</span>
               <span className="text-neutral-600 text-sm">Salida {COFFEE_TOUR_INFO.time}</span>
-              <span className="text-neutral-400 hidden sm:inline">|</span>
-              <span className="text-neutral-600 text-sm">{COFFEE_TOUR_INFO.duration}</span>
             </div>
             <span className="text-neutral-500 text-xs">Desde {COFFEE_TOUR_INFO.departurePoint}</span>
           </div>
