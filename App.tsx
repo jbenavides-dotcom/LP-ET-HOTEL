@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TourSection from './components/TourSection';
 import LocationSection from './components/LocationSection';
-import ConciergeChat from './components/ConciergeChat';
 import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
 
@@ -122,7 +121,16 @@ const App: React.FC = () => {
         </div>
       </footer>
 
-      <ConciergeChat />
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/573189565617?text=Hola%2C%20quiero%20información%20sobre%20el%20Coffee%20Tour"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60] w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:bg-[#128C7E] active:scale-95 transition-all duration-300"
+        aria-label="Contactar por WhatsApp"
+      >
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
+      </a>
     </div>
   );
 };
