@@ -2,7 +2,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
 import TourSection from './components/TourSection';
 import LocationSection from './components/LocationSection';
 import ConciergeChat from './components/ConciergeChat';
@@ -16,30 +15,8 @@ const App: React.FC = () => {
       
       <main>
         <Hero />
-        
+
         <TourSection />
-
-        <Experience />
-
-        {/* Sección de Educación y Eventos (Nuevos IDs de navegación) */}
-        <section id="eventos" className="py-16 sm:py-20 lg:py-24 bg-brand-beige/10">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-                <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">Servicios</h4>
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-brand-dark mb-8 sm:mb-10 lg:mb-12">Eventos Empresariales & Educación</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-                    <div className="bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] shadow-sm">
-                        <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Eventos Corporativos</h3>
-                        <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Espacios únicos para equipos que buscan inspiración en la naturaleza.</p>
-                        <a href={`mailto:${CONTACT_INFO.email}`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Solicitar Información</a>
-                    </div>
-                    <div id="educacion" className="bg-white p-6 sm:p-8 lg:p-12 rounded-2xl sm:rounded-[2rem] shadow-sm">
-                        <h3 className="text-xl sm:text-2xl font-serif mb-3 sm:mb-4">Educación Cafetera</h3>
-                        <p className="text-neutral-500 text-sm mb-4 sm:mb-6">Cursos especializados en barismo, degustación de cafés de especialidad y procesos de café.</p>
-                        <a href={`mailto:${CONTACT_INFO.email}?subject=Información sobre cursos de café`} className="text-brand-pink font-bold text-[10px] uppercase tracking-widest border-b border-brand-pink pb-1 hover:opacity-80 transition-opacity">Solicitar Información</a>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <LocationSection />
 
