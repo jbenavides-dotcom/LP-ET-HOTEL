@@ -2,12 +2,15 @@
 import React from 'react';
 import { EXPERIENCE_HIGHLIGHTS, ASSETS } from '../constants';
 import { Utensils, Leaf, Footprints } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Experience: React.FC = () => {
+  const reveal = useScrollReveal();
+
   return (
     <section id="experience" className="py-16 sm:py-24 lg:py-32 bg-white text-brand-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center">
+        <div ref={reveal.ref} className={`grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-14 lg:gap-20 items-center ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           {/* Images Grid - Order changes on mobile */}
           <div className="relative order-2 lg:order-1">
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
