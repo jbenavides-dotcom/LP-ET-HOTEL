@@ -2,13 +2,16 @@
 import React from 'react';
 import { ASSETS } from '../constants';
 import { Navigation } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const LocationSection: React.FC = () => {
+  const reveal = useScrollReveal();
+
   return (
     <section id="location" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Ubicación Card */}
-        <div className="bg-brand-dark rounded-2xl sm:rounded-[2.5rem] lg:rounded-[4rem] p-6 sm:p-10 lg:p-16 xl:p-24 text-white overflow-hidden relative">
+        <div ref={reveal.ref} className={`bg-brand-dark rounded-2xl sm:rounded-[2.5rem] lg:rounded-[4rem] p-6 sm:p-10 lg:p-16 xl:p-24 text-white overflow-hidden relative ${reveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
             <div className="absolute top-0 right-0 w-32 sm:w-48 lg:w-64 h-32 sm:h-48 lg:h-64 bg-brand-pink/10 blur-[100px] rounded-full"></div>
             <div className="relative z-10 max-w-xl mx-auto">
                 <div className="bg-white/5 p-8 sm:p-10 lg:p-16 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem] border border-white/10 flex flex-col items-center justify-center text-center">

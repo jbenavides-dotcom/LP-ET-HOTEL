@@ -2,14 +2,20 @@
 import React from 'react';
 import { TOUR_STEPS, BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
 import { Award, ChevronRight, Check, MessageCircle, Star } from 'lucide-react';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const TourSection: React.FC = () => {
+  const whyReveal = useScrollReveal();
+  const stepsReveal = useScrollReveal();
+  const includesReveal = useScrollReveal();
+  const techReveal = useScrollReveal();
+
   return (
     <section id="tour" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
         {/* ¿POR QUÉ EL COFFEE TRAIL? */}
-        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24">
+        <div ref={whyReveal.ref} className={`text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24 ${whyReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">¿Por qué La Palma & El Tucán?</h4>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un tour de café</h2>
           <p className="text-neutral-600 font-light text-base sm:text-lg mb-8 sm:mb-10">Es una experiencia que transforma tu forma de consumir.</p>
@@ -49,7 +55,7 @@ const TourSection: React.FC = () => {
         </div>
 
         {/* 3 PASOS DEL TOUR */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div ref={stepsReveal.ref} className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 ${stepsReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           {TOUR_STEPS.map((step, idx) => (
             <div key={idx} className="group bg-white rounded-2xl sm:rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
               <div className="aspect-[4/3] overflow-hidden">
@@ -70,7 +76,7 @@ const TourSection: React.FC = () => {
         </div>
 
         {/* SECCIÓN QUÉ INCLUYE */}
-        <div className="mt-16 sm:mt-20 lg:mt-24 bg-white rounded-2xl sm:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-sm">
+        <div ref={includesReveal.ref} className={`mt-16 sm:mt-20 lg:mt-24 bg-white rounded-2xl sm:rounded-[3rem] p-6 sm:p-10 lg:p-16 shadow-sm ${includesReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* COLUMNA IZQUIERDA: QUÉ INCLUYE */}
             <div>
@@ -126,7 +132,7 @@ const TourSection: React.FC = () => {
         </div>
 
         {/* SECCIÓN DE INNOVACIÓN TÉCNICA */}
-        <div className="mt-16 sm:mt-20 lg:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center bg-brand-pink/5 rounded-2xl sm:rounded-[3rem] p-6 sm:p-10 lg:p-20">
+        <div ref={techReveal.ref} className={`mt-16 sm:mt-20 lg:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center bg-brand-pink/5 rounded-2xl sm:rounded-[3rem] p-6 sm:p-10 lg:p-20 ${techReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
           <div className="relative order-2 lg:order-1">
             <div className="rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden aspect-[3/4] sm:aspect-[2/3] max-h-[500px] lg:max-h-[650px] w-full border-4 border-white">
               <img
